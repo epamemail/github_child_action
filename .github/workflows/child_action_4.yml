@@ -12,10 +12,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Run a one-line script
+      - name: Run the script Child GitHub Action
         run: echo Hello, Child Action!
 
-      - name: Echo 'parametr'
+      - name: Echo 'parametr' to check vakue
         run: |
           echo "Value of the 'parametr' is --> "${{ github.event.inputs.parametr }}""
           
