@@ -1,6 +1,12 @@
 name: Child Action 3
 
-on: [workflow_dispatch]
+on: 
+  workflow_dispatch:
+    inputs:
+      parametr_1:
+        description: 'Some description'     
+        required: true
+        default: 'Default value'
 
 jobs:
   build:
@@ -9,6 +15,6 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, Child Action!
 
-      - name: Event Information
+      - name: Echo 'parametr_1'
         run: |
-          echo "Event from '${{ github.event.client_payload.repository }}'"
+          echo "Value of the 'parametr_1' is --> '"${{ github.event.inputs.parametr_1 }}"'"
