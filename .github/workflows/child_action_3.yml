@@ -1,3 +1,5 @@
+name: Child Action 3
+
 on: [workflow_dispatch]
 
 jobs:
