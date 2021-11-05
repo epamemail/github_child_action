@@ -3,7 +3,7 @@ name: Child Action 3
 on: 
   workflow_dispatch:
     inputs:
-      parametr_1:
+      parametr:
         description: 'Some description'     
         required: true
         default: 'Default value'
@@ -15,6 +15,6 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, Child Action!
 
-      - name: Echo 'parametr_1'
+      - name: Echo 'parametr'
         run: |
-          echo "Value of the 'parametr_1' is --> '"${{ github.event.inputs.parametr_1 }}"'"
+          echo "Value of the 'parametr' is --> "${{ github.event.inputs.parametr }}""
