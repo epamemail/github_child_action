@@ -20,4 +20,4 @@ jobs:
           echo "Value of the 'parametr' is --> "${{ github.event.inputs.parametr }}""
           
       - name: Sleep
-        run: sleep 150
+        run: sleep 60
