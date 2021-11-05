@@ -7,5 +7,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run a one-line script
-        if: github.event.action == 'ping'
         run: echo Hello, Child Action!
+# if: github.event.action == 'ping'
