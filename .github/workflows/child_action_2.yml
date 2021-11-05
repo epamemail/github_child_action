@@ -1,0 +1,12 @@
+name: Child Action
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a one-line script
+        if: github.event.action == 'ping'
+        run: echo Hello, Child Action!
