@@ -1,4 +1,4 @@
-name: Child Action
+name: Child Action 1
 
 on:
   workflow_dispatch:
